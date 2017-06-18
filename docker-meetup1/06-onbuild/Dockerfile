@@ -7,4 +7,5 @@ COPY . /usr/src/app
 ARG COMMIT
 ENV COMMIT ${COMMIT:-no-commit}
 LABEL version="1.0"
+ONBUILD RUN echo this is onbuild command >> /tmp/onbuild
 CMD ["npm","start"]

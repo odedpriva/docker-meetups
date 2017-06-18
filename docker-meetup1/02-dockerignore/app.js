@@ -6,17 +6,12 @@ const http = require('http')
     , _ = require('lodash');
 
 const PORT=8000;
-const commit = process.env.COMMIT || 'nocommit'
 
 function handleRequest(request, response){
 
   let host = os.hostname();
   
-  let resObj = JSON.stringify({
-    hostName: host, 
-    ip: _.split(ip.address(),'.'),
-    commit: commit
-  });
+  let resObj = JSON.stringify({hostName: host, ip:_.split(ip.address(),'.')});
   response.writeHead(200, {'Content-Type': 'application/json'});
   response.end(resObj);
 
