@@ -1,2 +1,2 @@
-FROM caching
-RUN echo final >> /tmp/test
+FROM ubuntu:16.04
+RUN apt-get update -y
