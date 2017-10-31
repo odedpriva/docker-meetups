@@ -5,6 +5,35 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+
+$update_vm = <<SCRIPT
+echo INFO: updating repositories
+sudo apt-get update
+SCRIPT
+
+$install_go = <<SCRIPT
+echo INFO: installing golang
+sudo curl -O https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
+sudo tar -xvf go1.8.linux-amd64.tar.gz
+sudo mv go /usr/local
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~vagrant/.profile
+echo 'export GOROOT=/usr/local/go' >> ~vagrant/.profile
+echo 'export PATH=$PATH:$GOROOT/bin' >> ~vagrant/.profile
+SCRIPT
+
+$install_docker = <<SCRIPT
+echo INFO: installing docker
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+sudo usermod -aG docker vagrant
+SCRIPT
+
+$install_utils = <<SCRIPT
+echo INFO: installing other utils
+sudo apt install iotop
+SCRIPT
+
+
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -12,10 +41,11 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "bento/ubuntu-16.04"
-  config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "playbook.yml"
-  end
+  config.vm.box = "bento/ubuntu-17.04"
+  config.vm.provision "shell", inline: $update_vm
+  config.vm.provision "shell", inline: $install_go
+  config.vm.provision "shell", inline: $install_docker
+  config.vm.provision "shell", inline: $install_utils
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
