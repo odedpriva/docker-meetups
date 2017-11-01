@@ -14,8 +14,8 @@ OCI
 Linux Containers: 
 ---
 uses discrete kernel features like cgroups, namespaces, SELinux, and more.
-* [namespace](namespace.md)
-* [cgroups](cgroups.md)
+* [namespace](namespace.md)  
+* [cgroups](cgroups.md)  
 
 
 
@@ -23,9 +23,9 @@ uses discrete kernel features like cgroups, namespaces, SELinux, and more.
 note: external links
 ---
 * [namespace](https://en.wikipedia.org/wiki/Linux_namespaces)  
-* [cgroup](https://en.wikipedia.org/wiki/Cgroups)
-* [oci](https://www.opencontainers.org/)
-* [docker and oci](https://blog.docker.com/2017/07/demystifying-open-container-initiative-oci-specifications/)
+* [cgroup](https://en.wikipedia.org/wiki/Cgroups)  
+* [oci](https://www.opencontainers.org/)  
+* [docker and oci](https://blog.docker.com/2017/07/demystifying-open-container-initiative-oci-specifications/)  
 
 
 

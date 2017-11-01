@@ -36,13 +36,13 @@ func run() {
 
 func child() {
 	fmt.Printf("Running child %v \n", os.Args[2:])
-
+	name := "container(not really)"
 	cmd := exec.Command(os.Args[2], os.Args[3:]...)
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
-	must(syscall.Sethostname([]byte("container")))
+	must(syscall.Sethostname([]byte(name)))
 
 	// chrooting to new file system
 	must(syscall.Chroot("/home/vagrant/alpine"))

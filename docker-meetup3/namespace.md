@@ -13,8 +13,11 @@ As of kernel version 4.10 (Released 19 February, 2017), there are 7 kinds of nam
 6. user ID
 7. control group 
 
+![image](https://uploads.toptal.io/blog/image/674/toptal-blog-image-1416487554032.png)
+![image](https://uploads.toptal.io/blog/image/675/toptal-blog-image-1416487605202.png)
+![image](https://uploads.toptal.io/blog/image/677/toptal-blog-image-1416545619045.png)
 
-[let's start](01-namespace/00-setup/setup.md)
+[let's start](01-namespace/00-setup/README.md)
 
 
 #### external links

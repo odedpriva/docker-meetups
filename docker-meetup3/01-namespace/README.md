@@ -1,8 +1,6 @@
-http://windsock.io/introducing-namespaces/
-https://www.youtube.com/watch?v=MHv6cWjvQjM
-
-
-```
+the resources I used for this session: 
+* http://windsock.io/introducing-namespaces/
+* https://www.youtube.com/watch?v=MHv6cWjvQjM
 
 
  few notes : 

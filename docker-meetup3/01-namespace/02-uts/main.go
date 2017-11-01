@@ -21,7 +21,7 @@ func main() {
 }
 
 func run() {
-	fmt.Printf("Running %v \n", os.Args[2:])
+	fmt.Printf("Running main %v \n", os.Args[2:])
 
 	cmd := exec.Command("/proc/self/exe", append([]string{"child"}, os.Args[2:]...)...)
 	cmd.Stdin = os.Stdin
@@ -35,15 +35,15 @@ func run() {
 }
 
 func child() {
-	fmt.Printf("Running %v \n", os.Args[2:])
-
+	fmt.Printf("Running chile %v \n", os.Args[2:])
+	name := "container(not really)"
 	cmd := exec.Command(os.Args[2], os.Args[3:]...)
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 
-	// setting the host name inside of the 'container'
-	must(syscall.Sethostname([]byte("container")))
+	// setting the host name insid the 'container'
+	must(syscall.Sethostname([]byte(name)))
 
 	must(cmd.Run())
 }

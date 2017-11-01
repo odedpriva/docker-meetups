@@ -1,14 +1,29 @@
 
+vagrant@vagrant:~$ sudo go run /vagrant/02-cgroups/02-limit-processes/main.go run /bin/bash
+
+
 ```
 container(not really): sleep 1000
 
-vagrant@vagrant:/sys/fs/cgroup/pids/vagrant$ cat cgroup.procs  | grep $(pidof sleep)
+vagrant@vagrant:~$ ls -la /sys/fs/cgroup/pids/vagrant
+total 0
+drwxr-xr-x 2 root root 0 Nov  1 08:05 .
+dr-xr-xr-x 7 root root 0 Nov  1 08:05 ..
+-rw-r--r-- 1 root root 0 Nov  1 08:05 cgroup.clone_children
+-rw-r--r-- 1 root root 0 Nov  1 08:02 cgroup.procs
+-rw-r--r-- 1 root root 0 Nov  1 08:02 notify_on_release
+-r--r--r-- 1 root root 0 Nov  1 08:05 pids.current
+-r--r--r-- 1 root root 0 Nov  1 08:05 pids.events
+-rw-r--r-- 1 root root 0 Nov  1 08:02 pids.max
+-rw-r--r-- 1 root root 0 Nov  1 08:05 tasks
+```
+vagrant@vagrant:~$ cat /sys/fs/cgroup/pids/vagrant/cgroup.procs  | grep $(pidof sleep)
 24344
 
 vagrant@vagrant:/sys/fs/cgroup/pids/vagrant$ cat pids.max
-20
+vagrant@vagrant:~$ cat /sys/fs/cgroup/pids/vagrant/pids.max
+50
 ```
-
 
 let's test this rule by running a `fork bomb`
 

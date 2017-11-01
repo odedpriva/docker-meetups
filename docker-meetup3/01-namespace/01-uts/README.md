@@ -23,4 +23,7 @@ sudo go run /vagrant/01-namespace/01-uts/main.go run /bin/bash
 Running [/bin/bash]
 root@vagrant:~# hostname luminate
 root@vagrant:~# hostname
+luminate
 ```
+
+[now](../02-uts/README.md), we want to make it change the hostname befor we 'enter' the 'container'

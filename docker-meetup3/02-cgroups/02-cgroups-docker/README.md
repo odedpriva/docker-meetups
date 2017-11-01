@@ -1,3 +1,30 @@
+let's see implementation of cgroups in Docker
+
+run a container and a long running process
+```
+docker run -it --cpu-shares=512 ubuntu:17.04 /bin/bash
+
+root@1d4ca31dd3dc:/# sleep 2000
+```
+
+
+let's see the cgroup in docker 
+```
+<!-- # enter docker-for-mac / docker-for-windows 
+docker run --rm -it --privileged --pid=host walkerlee/nsenter -t 1 -m -u -i -n sh
+pidof sleep
+2193 -->
+
+cd /sys/fs/cgroup/cpu/docker/62ad2712d56b1234babffb7409600d939a73b7b63ae517e01abcf0485deb6095
+cat tasks
+23885
+23939
+
+cat cpu.shares
+512
+
+```
+
 After version 1.10 docker added new features to manipulate IO speed in the container.
 ```
 

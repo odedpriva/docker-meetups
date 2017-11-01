@@ -6,3 +6,5 @@ docker export ubuntu-fs  -o ubuntu.tar
 mkdir /home/vagrant/ubuntu
 sudo tar xvf ubuntu.tar -C /home/vagrant/ubuntu
 ```
+
+let's limit number of [process](../01-limit-processes/README.md) 

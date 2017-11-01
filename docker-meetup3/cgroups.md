@@ -9,6 +9,9 @@ by partitioning things like cpu time, system memory, disk and network bandwidth,
 * network bandwidth
 * monitoring
 
+![image](https://sysadmincasts.com/static/extra/14-cgroups-overview.gif)
+
+
 As an example of a scenario that can benefit from multiple hierarchies, consider a large
 university server with various users - students, professors, system
 tasks etc. The resource planning for this server could be along the
@@ -30,3 +33,6 @@ following lines:
        Network : WWW browsing (20%), Network File System (60%), others (20%)
                                / \
                Professors (15%)  students (5%)
+
+
+[let's start](02-cgroups/00-setup/README.md)
