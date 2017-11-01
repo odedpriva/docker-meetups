@@ -20,7 +20,7 @@ As of kernel version 4.10 (Released 19 February, 2017), there are 7 kinds of nam
 [let's start](01-namespace/00-setup/README.md)
 
 
-#### external links
+### external links
 
 [introducing-namespaces](http://windsock.io/introducing-namespaces/)
 
