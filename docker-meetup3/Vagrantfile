@@ -31,6 +31,7 @@ SCRIPT
 $install_utils = <<SCRIPT
 echo INFO: installing other utils
 sudo apt install iotop
+go get github.com/docker/docker/pkg/reexec
 SCRIPT
 
 

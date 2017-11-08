@@ -1,8 +1,8 @@
-
-vagrant@vagrant:~$ sudo go run /vagrant/02-cgroups/02-limit-processes/main.go run /bin/bash
-
+let's create start a process and controll its resources using cgroup
 
 ```
+vagrant@vagrant:~$ sudo go run /vagrant/02-cgroups/01-limit-processes/main.go run /bin/bash
+
 container(not really): sleep 1000
 
 vagrant@vagrant:~$ ls -la /sys/fs/cgroup/pids/vagrant
@@ -17,7 +17,7 @@ dr-xr-xr-x 7 root root 0 Nov  1 08:05 ..
 -rw-r--r-- 1 root root 0 Nov  1 08:02 pids.max
 -rw-r--r-- 1 root root 0 Nov  1 08:05 tasks
 ```
-vagrant@vagrant:~$ cat /sys/fs/cgroup/pids/vagrant/cgroup.procs  | grep $(pidof sleep)
+vagrant@vagrant:~$ cat /sys/fs/cgroup/pids/vagrant/cgroup.procs  | grep $(pidof sleep)  
 24344
 
 vagrant@vagrant:/sys/fs/cgroup/pids/vagrant$ cat pids.max

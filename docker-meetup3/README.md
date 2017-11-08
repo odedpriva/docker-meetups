@@ -1,8 +1,21 @@
 Container from scratch
 ---
+
+![The future of Linux Containers](https://www.youtube.com/watch?v=wW9CAH9nSLs)
+
+Often thought of as cheap VMs, containers are just isolated groups of processes running on a single host. 
+
 * Operating-system-level virtualization, also known as containerization 
 * Operating system feature in which the kernel allows the existence of multiple isolated user-space instances
 * Programs running inside a container can only see the container's contents and devices assigned to the container.
+
+Linux Containers: 
+---
+uses discrete kernel features like cgroups, namespaces, SELinux, and more.
+
+* [namespace](01-namespace/README.md)  
+* [cgroups](02-cgroups/README.md)  
+
 
 OCI
 ---
@@ -11,13 +24,9 @@ OCI
 
 ![OCI](https://i0.wp.com/blog.docker.com/wp-content/uploads/243938a0-856b-4a7f-90ca-2452a69a385c-1.jpg?w=1019&ssl=1)
 
-Linux Containers: 
----
-uses discrete kernel features like cgroups, namespaces, SELinux, and more.
-
-* [namespace](namespace.md)  
-* [cgroups](cgroups.md)  
-
+OCI implementations: 
+* [runc](https://github.com/opencontainers/runc)
+* [railcar](https://github.com/oracle/railcar) - Rust implementation of the Open Containers Initiative oci-runtime
 
 
 
