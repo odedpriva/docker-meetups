@@ -34,6 +34,9 @@ uses discrete kernel features like cgroups, namespaces, SELinux, and more.
 
 OCI
 ---
+
+[twitter debate](https://twitter.com/kelseyhightower/status/758832320245665792)  
+
 * OCI ( open container initiative ) - Established in June 2015 by Docker and other leaders in the container industry
 * OCI currently contains two specifications: the Runtime [Specification](http://www.github.com/opencontainers/runtime-spec) and the Image [Specification](http://www.github.com/opencontainers/image-spec)
 
