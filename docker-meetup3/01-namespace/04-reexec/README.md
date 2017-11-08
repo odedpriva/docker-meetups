@@ -67,6 +67,11 @@ docker has implemented the same mechanism in a package called [reexec](https://g
 
 let's use Docker's reexec package. 
 
+```
+go get github.com/docker/docker/pkg/reexec
+```
+
+
 ```bash
 vagrant@vagrant:~$ go run /vagrant/01-namespace/04-reexec/main.go
 

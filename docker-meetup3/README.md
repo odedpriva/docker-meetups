@@ -1,3 +1,18 @@
+setting the environment
+---
+if you want to follow along with the examples, you need 
+* [vagrant](https://www.vagrantup.com/)
+
+```bash
+docker-meetup3 git:(master) ✗ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'bento/ubuntu-17.04'...
+..
+..
+
+```
+
+
 Container from scratch
 ---
 
@@ -13,8 +28,8 @@ Linux Containers:
 ---
 uses discrete kernel features like cgroups, namespaces, SELinux, and more.
 
-* [namespace](01-namespace/README.md)  
-* [cgroups](02-cgroups/README.md)  
+* [namespace](https://en.wikipedia.org/wiki/Linux_namespaces)  
+* [cgroup](https://en.wikipedia.org/wiki/Cgroups)
 
 
 OCI
@@ -28,12 +43,12 @@ OCI implementations:
 * [runc](https://github.com/opencontainers/runc)
 * [railcar](https://github.com/oracle/railcar) - Rust implementation of the Open Containers Initiative oci-runtime
 
+let's start with [namespace](01-namespace/README.md)
+
 
 
 note: external links
----
-* [namespace](https://en.wikipedia.org/wiki/Linux_namespaces)  
-* [cgroup](https://en.wikipedia.org/wiki/Cgroups)  
+---  
 * [oci](https://www.opencontainers.org/)  
 * [docker and oci](https://blog.docker.com/2017/07/demystifying-open-container-initiative-oci-specifications/)  
 
