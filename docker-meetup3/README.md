@@ -1,4 +1,4 @@
-setting the environment
+Setting up the environment
 ---
 if you want to follow along with the examples, you need 
 * [vagrant](https://www.vagrantup.com/)
@@ -39,15 +39,13 @@ OCI
 
 ![OCI](https://i0.wp.com/blog.docker.com/wp-content/uploads/243938a0-856b-4a7f-90ca-2452a69a385c-1.jpg?w=1019&ssl=1)
 
-OCI implementations: 
-* [runc](https://github.com/opencontainers/runc)
-* [railcar](https://github.com/oracle/railcar) - Rust implementation of the Open Containers Initiative oci-runtime
+OCI implementations:  
+* [runc](https://github.com/opencontainers/runc)  
+* [railcar](https://github.com/oracle/railcar) - Rust implementation  
 
 let's start with [namespace](01-namespace/README.md)
 
-
-
-note: external links
+External links
 ---  
 * [oci](https://www.opencontainers.org/)  
 * [docker and oci](https://blog.docker.com/2017/07/demystifying-open-container-initiative-oci-specifications/)  
